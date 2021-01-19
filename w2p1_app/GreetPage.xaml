@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+
+    x:Class="w2p1_app.GreetPage">
+   
+    <StackLayout BindingContext="{x:Reference slider}"
+        HorizontalOptions="Center" VerticalOptions="Center">
+
+        <Button Text="Click me"
+            Clicked="Button_Clicked"
+                TextColor="Red"
+                FontSize="14"
+           />
+
+
+         <Label 
+             x:Name="mylabel"
+               Text="{
+                Binding Value,
+                StringFormat='The value is {0:F3}'}"
+
+                Opacity="{Binding Value}"
+
+                />
+
+        <BoxView Color="Green"
+                 Opacity="{
+                Binding Value}"
+                 />
+
+        <Slider x:Name="slider" 
+               />
+
+       
+        
+
+
+
+
+    </StackLayout>
+</ContentPage>

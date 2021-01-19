@@ -10,7 +10,7 @@ namespace w2p1_app
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new GreetPage();
         }
 
         protected override void OnStart()
