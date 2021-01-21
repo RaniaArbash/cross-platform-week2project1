@@ -5,40 +5,33 @@
 
 
     x:Class="w2p1_app.GreetPage">
-   
-    <StackLayout BindingContext="{x:Reference slider}"
-        HorizontalOptions="Center" VerticalOptions="Center">
+   <StackLayout BindingContext="{x:Reference slider}"
+                HorizontalOptions="Center"
+                 VerticalOptions="Center">
 
-        <Button Text="Click me"
-            Clicked="Button_Clicked"
-                TextColor="Red"
-                FontSize="14"
-           />
-
-
-         <Label 
-             x:Name="mylabel"
-               Text="{
-                Binding Value,
-                StringFormat='The value is {0:F3}'}"
-
-                Opacity="{Binding Value}"
-
-                />
-
-        <BoxView Color="Green"
-                 Opacity="{
-                Binding Value}"
+        <Label x:Name="mylabel"
+              Text="Hello World"
+                 TextColor="Red"
+                 FontSize="20"
                  />
+         <Button Text="Click Me"
+                 Clicked="Button_Clicked"/>
 
-        <Slider x:Name="slider" 
+        <Label 
+            x:Name="secondLabel"
+               Text="{Binding Value,
+                StringFormat= 'The value is {0:F2}'
+
+            }"
+               Opacity="{Binding Value}"
                />
 
-       
+        <BoxView Color="Green"
+                 Opacity="{Binding Value}"
+                 />
+        <Slider
+            x:Name="slider"
+            />
         
-
-
-
-
-    </StackLayout>
-</ContentPage>
+     </StackLayout> 
+    </ContentPage>
